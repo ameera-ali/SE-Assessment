@@ -113,7 +113,7 @@ right_btn.configure(bg="#E6E6FA")
 right_btn.pack(pady=10)
 
 
-back_btn = tk.Button(learning_triangles, text="Back", command=lambda: welcome_pg.tkraise(), font=style3, foreground='BLACK', background=colour2, activebackground=colour2, activeforeground=colour2, highlightthickness=2, highlightcolor='WHITE', cursor = 'hand1', width=11, height=1, highlightbackground= colour1,)
+back_btn = tk.Button(learning_triangles, text="Back", command=lambda: options_pg.tkraise(), font=style3, foreground='BLACK', background=colour2, activebackground=colour2, activeforeground=colour2, highlightthickness=2, highlightcolor='WHITE', cursor = 'hand1', width=11, height=1, highlightbackground= colour1,)
 back_btn.configure(bg="#E6E6FA")
 back_btn.pack(pady=10)
 
