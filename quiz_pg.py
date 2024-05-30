@@ -18,18 +18,26 @@ root = tk.Tk()
 style= Style(theme="flatly")
 root.configure(bg='#E6E6FA')
 
+font_family = 'Helvetica'
+
+# Colours:
+colour1= '#C2BBF0'
+colour2 = '#E6E6FA'
+colour3 = 'BLACK'
+colour4 = 'WHITE'
+
 style1= font.Font(family='Helvetica', size=25, weight='bold')
 style2 = font.Font(family='Helvetica', size=20)
 
 #Making the question label
-qs_label = ttk.Label(
+qs_label = tk.Label(
    root,
-   anchor="center",
+   justify="center",
    wraplength=500,
-   padding=10,
+   font=(font_family, 17), 
 )
 
-qs_label.pack(pady=10)
+qs_label.pack(pady=50, padx=30)
 
 #Functions to display the current question and options
 def show_question():
@@ -94,13 +102,14 @@ def show_results():
   score_label.pack_forget()
 
 
-  result_label = ttk.Label(
+  result_label = tk.Label(
       root,
       text="Your final score is {}/{}".format(score, len(quiz_data)),
-      anchor="center",
-      padding=10
+      justify="center",
+      font=(font_family, 20)
+
   )
-  result_label.pack(pady=10)
+  result_label.pack(pady= 20)
 
 
   if score >= 7:
@@ -111,21 +120,22 @@ def show_results():
       comment = "Looks like you need more practice. Don’t give up!"
 
 
-  comment_label = ttk.Label(
+  comment_label = tk.Label(
       root,
       text=comment,
-      anchor="center",
-      padding=10,
+      justify="center",
+      font=(font_family, 18),
   )
-  comment_label.pack(pady=10)
+  comment_label.pack(pady=20)
 
 
   quit_btn = ttk.Button(
       root,
       text="Goodbye!",
-      command=run_welcome_pg
+      command=run_welcome_pg,
+      cursor = 'hand1'
   )
-  quit_btn.pack(pady=10)
+  quit_btn.pack(pady=20)
 
 def run_welcome_pg():
   root.destroy()  # Close the current window
@@ -142,12 +152,12 @@ for i in range(4):
 
 
 #Making the feedback label
-feedback_label = ttk.Label(
+feedback_label = tk.Label(
    root,
    anchor="center",
-   padding=10
+   font=(font_family, 13),   
 )
-feedback_label.pack(pady=10)
+feedback_label.pack(pady=10, padx=10)
 
 
 #Initialise the score
@@ -155,11 +165,12 @@ score = 0
 
 
 #Create the score label
-score_label = ttk.Label(
+score_label = tk.Label(
    root,
    text="Score: 0/{}".format(len(quiz_data)),
    anchor="center",
-   padding=10
+   font=(font_family, 13)
+
 )
 score_label.pack(pady=10)
 
@@ -169,7 +180,8 @@ next_btn = ttk.Button(
    root,
    text="Next",
    command=next_question,
-   state="disabled"
+   state="disabled",
+   cursor = 'hand1'
 )
 next_btn.pack(pady=10)
 

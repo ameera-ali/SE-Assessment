@@ -99,7 +99,7 @@ learning_triangles_lb.pack(pady=30)
 isosceles_btn = tk.Button(learning_triangles, text="Isosceles", command=lambda: isosceles.tkraise(), font=style3, foreground='BLACK', background=colour1, activebackground=colour2, activeforeground=colour2, highlightthickness=2, highlightcolor=colour2, cursor = 'hand1', width=11, height=1, highlightbackground= colour1,)
 isosceles_btn.pack(pady=10)
 
-scalene_btn = tk.Button(learning_triangles, text="Scalene", command=lambda: scalene.tkraise(), font=style3, foreground='BLACK', background=colour2, activebackground=colour2, activeforeground=colour1, highlightthickness=2, highlightcolor='WHITE', cursor = 'hand1', width=11, height=1, highlightbackground= colour1,)
+scalene_btn = tk.Button(learning_triangles, text="Scalene", command=lambda: scalene.tkraise(), font=style3, foreground='BLACK', background=colour1, activebackground=colour2, activeforeground=colour2, highlightthickness=2, highlightcolor=colour2, cursor = 'hand1', width=11, height=1, highlightbackground= colour1,)
 scalene_btn.configure(bg="#E6E6FA")
 scalene_btn.pack(pady=10)
 
